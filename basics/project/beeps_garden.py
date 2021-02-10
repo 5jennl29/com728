@@ -8,15 +8,16 @@ print("Help Beep by typing in the length and width of his garden, in metres.")
 print("Length:")
 length = float(input())
 
-#Length is a float
+#Width is a float
 print("Width:")
 width = float(input())
 
 print(f"Beep's garden is {length} metres long and {width} metres wide.")
 #Area calculation
 area = round(length * width, 1)
-print(f"So Beep's garden is {area} metres square.\n")
+print(f"So Beep's garden is {area} square metres.\n")
 
+#Add flowers to Beep's garden with 3 x user input
 print("Beep wants to put a flower bed at the bottom of his garden. Help him to plant the flowers for it!\n")
 print("Please enter the number of Geraniums (1-10).")
 geranium = int(input())
