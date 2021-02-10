@@ -1,2 +1,64 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net" modified="2021-02-09T21:36:24.762Z" agent="5.0 (Windows)" etag="hyMsRIUXfbeHusG4tFhD" version="14.2.9"><diagram id="Br8o2wozJj6hSQSZIPI2" name="Page-1">7VnbcuI4EP0aqjIPu4UvsOTRQ5zAFpukgGx2nqYULGxNZLdHFgH261eyJV+wIc4ME5aaeQixj1q37nNabrtjDcPNDUNx8Bd4mHbMrrfpWFcd0xz0u+JXAtsM6HXNDPAZ8TLIKIAZ+RcrUPXzV8TDScWQA1BO4iq4gCjCC17BEGOwrpotgVZnjZGPa8BsgWgdfSQeD9S2et0CH2HiB3pmo6taQqSNFZAEyIN1CbLcjjVkADy7CjdDTKXvtF+yftd7WvOFMRzxNh160dfgM/9qTtHzyPkT/r6++3T9m/FHNswLoiu1Y7VavtUuwJ7wiLoFxgPwIULULdCPDFaRh+U8XXFX2EwAYgEaAvyCOd+q8KIVBwEFPKSqNZtTTrR3cwpKYMUW+NCOFEkQ8zE/YGflIRDUxRBizraiH8MUcfJSXQdSJPJzu8LP4kK5+i1ur3n9o3szvq27nlJBdOnidUA4nsUo3ftaSK3qwCVEXMdID44Zx5vD/qzvX3WwbMVaJVtL3a4LDRia2EGJ/1oXR/eYWfcYxrEkTfQFtonMFIh5OCKR3zGH6arkclHEkzRlyN1TcZdSKJRtSwprzGTr00rCEcZebrsG9iz+QdrC07E8EuIoIRBJI1jKKUgxrxyQsIT/XouhCAKvBivhDJ7xECgwgUQQyQAvCaU7EKLEj8QtxUs5ggwoEZnJUXBIPI/u40ZVkmV6mEegh31ZpYfdq9HDHDTQw/xR9DDqijrzPGa1zGP2KfOY1eD1PpVk9ciLuPTl5fj2/mEurB7HV/NRR1IgM3li2kIjYg2lfgeGmri3N+lYF+GH9sPt8EEcyLG8FNFBlGIKPkOhMIwxE1LnmO223RcNr+ZjssH6acYoSXkheJD2P3rCNqqKzLNzOWM3SbL/wyRZT9lnLkm7pSR7p5Sk3UaSuWY0MHQmw4eJM3dFV2fqOiUJPb1ZpbXRL7T0/8m1e1i2r865w6MqS17RZk2Lx5CfVZWf2SQ/+13l15Sbz1p+vZbyG5xSfr028rt7mGfnWGqhBPc95+JFqMFkFWvQLHUvwR9+yuNxR5/WyfXZ30sUokOiKpxqEZNWJCivX2T5IvQpoKJSeQLOIWyqUkR10h1hGqdwqMdcBAAJzrsXhdES5PhEFjU5ZchewvwfCp0jUKVW29h1qrxvcdP0jmbnhM2oIuverUij5ao0jf5n8feGFNF8Ev8c4bZOHm6j6RHurE/uQcuT2+g2h+p9ju5Bm6NbV6DXk7tHd9r6gJ5/undnsl6djRxx9atobTyV7ZOfypff8Pj2Hc9tN870yr2VGxamGaVmv6jR9D6jf/r3GU2P9medlrWLX83Ll6dMy3qVb3yjcTV1HmVtNRuOx8d9m6FFe8ZvK3a+7vSaxNX0eecbxCVui2+caVvpQ7Hl/gc=</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-02-10T10:10:41.808Z" agent="5.0 (Windows)" etag="NazhjxUdaA7Dhe_zlSDV" version="14.3.0" type="github">
+  <diagram id="Br8o2wozJj6hSQSZIPI2" name="Page-1">
+    <mxGraphModel dx="861" dy="503" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5nqh_tq2RakHAJoVFOYF-1" target="5nqh_tq2RakHAJoVFOYF-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-1" value="BEGIN" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="340" y="30" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-2" value="Beep enjoys gardening, he wants to plant some flowers but needs to work out the dimensions of his garden first." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="490" y="45" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5nqh_tq2RakHAJoVFOYF-3" target="5nqh_tq2RakHAJoVFOYF-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-3" value="&lt;div&gt;INPUT WIDTH &lt;br&gt;&lt;/div&gt;&lt;div&gt;INPUT LENGTH (m)&lt;br&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;align=center;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="310" y="120" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5nqh_tq2RakHAJoVFOYF-4" target="5nqh_tq2RakHAJoVFOYF-5" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-4" value="&lt;div&gt;&lt;b&gt;CALCULATE AREA&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;(WIDTH X LENGTH)&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="330" y="220" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5nqh_tq2RakHAJoVFOYF-5" target="5nqh_tq2RakHAJoVFOYF-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-5" value="&lt;div&gt;OUTPUT = AREA &lt;br&gt;&lt;/div&gt;&lt;div&gt;(m&lt;sup&gt;2&lt;/sup&gt;)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;align=center;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="330" y="320" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-6" value="&lt;i&gt;Beep wants to put a flower bed at the bottom of his garden. Help him to choose the flowers for it.&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="490" y="440" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-7" value="&lt;b&gt;Beep, your garden is _ m&lt;sup&gt;2&lt;/sup&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="490" y="340" width="280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5nqh_tq2RakHAJoVFOYF-8" target="5nqh_tq2RakHAJoVFOYF-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-8" value="&lt;div&gt;INPUT FLOWER&lt;/div&gt;&lt;div&gt;TYPES (SHAPES)&lt;br&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;align=center;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="330" y="420" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="K-Uhr44QwJhIJins5E7r-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5nqh_tq2RakHAJoVFOYF-9" target="K-Uhr44QwJhIJins5E7r-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-9" value="&lt;div&gt;OUTPUT = &lt;br&gt;&lt;/div&gt;&lt;div&gt;GARDEN w/FLOWERS&lt;br&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;align=center;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="310" y="620" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5nqh_tq2RakHAJoVFOYF-10" target="5nqh_tq2RakHAJoVFOYF-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5nqh_tq2RakHAJoVFOYF-10" value="&lt;div&gt;&lt;b&gt;DRAW ASCII&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;GARDEN&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="340" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="K-Uhr44QwJhIJins5E7r-1" value="END" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="340" y="720" width="120" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
