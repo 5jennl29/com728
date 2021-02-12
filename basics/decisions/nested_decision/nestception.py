@@ -35,5 +35,6 @@ elif where == "in the lab":
     else:
         print("Found some tools but no battery")
 
+# If any other answer is given
 else:
     print("I do not know where that is but I will keep looking.")
