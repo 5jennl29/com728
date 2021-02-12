@@ -12,5 +12,9 @@ elif direction == "down":
 elif direction == "left":
     print("I am painting in the left direction!")
 
-else:
+elif direction == "right":
     print("I am painting in the right direction!")
+
+# any other answer
+else:
+    print("I have no idea which direction I am painting in!")
