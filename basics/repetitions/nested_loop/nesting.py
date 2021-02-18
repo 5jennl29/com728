@@ -10,9 +10,9 @@ marker1_position = -1
 marker2_position = -1
 
 for position in range(0, len(sequence), 1):
-    letter = sequence[position]
+    character = sequence[position]
 
-    if letter == marker:
+    if character == marker:
         if (marker1_position == -1):
             marker1_position = position
         else:
