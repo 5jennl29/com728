@@ -20,7 +20,7 @@ def run():
     # Calls game function
     play_guess_the_number(number)
 
-# Decisions here (using variable 'number')
+# Decisions here (using parameter 'number')
 def play_guess_the_number(number):
 
     guess = int(input())
