@@ -2,7 +2,7 @@
 
 import random as rnd
 
-def run():
+def guess_the_number():
     # Ask user for min value
     print("Please enter the minimum value")
     min = int(input())  # Store min value
@@ -18,10 +18,10 @@ def run():
     print(f"I am thinking of a number between {min} and {max}. Can you guess what it is?")
 
     # Calls game function
-    play_guess_the_number(number)
+    guess_func(number)
 
 # Decisions here (using parameter 'number')
-def play_guess_the_number(number):
+def guess_func(number):
 
     guess = int(input())
 
@@ -31,15 +31,15 @@ def play_guess_the_number(number):
     elif guess > number:
         print("Your guess is too high!")
         print("Guess again")
-        play_guess_the_number(number)
+        guess_func(number)
 
     elif guess < number:
         print("Your guess is too low!")
         print("Guess again")
-        play_guess_the_number(number)
+        guess_func(number)
 
     else:
         print("Something has gone wrong!")
 
 
-run()
+guess_the_number()
