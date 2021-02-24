@@ -1,14 +1,20 @@
-print()
-print("What phrase do you see?") # Ask user for input (phrase)
-phrase = input()
+def run():
 
-print()
-print("Reversing...")
-print("The phrase is: ", end="")
+    print()
+    print("What phrase do you see?") # Ask user for input (phrase)
+    phrase = input()
 
-reversed = ""  # Reversed is the phrase string
+    print()
+    print("Reversing...")
+    print("The phrase is: ", end="")
 
-for letter in phrase:  # Taking each letter in the phrase...
-    reversed = letter + reversed   # And adding the next one in front of it, thereby reversing the order.
+    reversed = ""  # Reversed is the phrase string
 
-print(reversed)
+    for letter in phrase:  # Taking each letter in the phrase...
+        reversed = letter + reversed   # And adding the next one in front of it, thereby reversing the order.
+
+    print(reversed)
+
+# call the function when the module is executed directly
+if __name__ == "__main__":
+    run()

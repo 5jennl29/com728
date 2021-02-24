@@ -2,7 +2,7 @@
 
 import random as rnd
 
-def guess_the_number():
+def run():
     # Ask user for min value
     print("Please enter the minimum value")
     min = int(input())  # Store min value
@@ -41,5 +41,8 @@ def guess_func(number):
     else:
         print("Something has gone wrong!")
 
+# guess_the_number()
 
-guess_the_number()
+# call the function when the module is executed directly
+if __name__ == "__main__":
+    run()

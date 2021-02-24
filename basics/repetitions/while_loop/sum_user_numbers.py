@@ -1,15 +1,21 @@
-print()
-print("How many numbers should I sum up?") #request for user input (numbers to add)
-numbers_to_add = int(input())
+def run():
 
-added = 1 #added starts at 1 (first number to add)
+    print()
+    print("How many numbers should I sum up?") #request for user input (numbers to add)
+    numbers_to_add = int(input())
 
-total = 0 #running total
+    added = 1 #added starts at 1 (first number to add)
 
-while added <= numbers_to_add:
-    print(f"Please enter number {added} of {numbers_to_add}:")
-    number = int(input())   # user input of next number to add
-    total = total + number   # running total incl user input
-    added = added + 1
+    total = 0 #running total
 
-print(f"The total is {total}.")
+    while added <= numbers_to_add:
+        print(f"Please enter number {added} of {numbers_to_add}:")
+        number = int(input())   # user input of next number to add
+        total = total + number   # running total incl user input
+        added = added + 1
+
+    print(f"The total is {total}.")
+
+# call the function when the module is executed directly
+if __name__ == "__main__":
+    run()

@@ -1,16 +1,22 @@
-# Define function
-def cross_bridge(steps):
+def run():
 
-    for step in range(steps):  # For each 'step' in the range of 'steps' (3 in first call, 6 in second call)
-        print("Crossed step.")   # Print this message
+    # Define function
+    def cross_bridge(steps):
 
-    if steps > 5:   # Print this if steps are greater than 5
-        print("The bridge is collapsing!")
-    else:
-        print("We must keep going!")  # Otherwise print this message
+        for step in range(steps):  # For each 'step' in the range of 'steps' (3 in first call, 6 in second call)
+            print("Crossed step.")   # Print this message
+
+        if steps > 5:   # Print this if steps are greater than 5
+            print("The bridge is collapsing!")
+        else:
+            print("We must keep going!")  # Otherwise print this message
 
 
-# Function calls
-cross_bridge(3)
-cross_bridge(6)
+    # Function calls
+    cross_bridge(3)
+    cross_bridge(6)
+
+# call the function when the module is executed directly
+if __name__ == "__main__":
+    run()
 
