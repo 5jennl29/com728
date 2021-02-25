@@ -41,7 +41,7 @@ def guess_func(number):
     else:
         print("Something has gone wrong!")
 
-# guess_the_number()
+#run()
 
 # call the function when the module is executed directly
 if __name__ == "__main__":
