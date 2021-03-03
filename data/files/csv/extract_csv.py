@@ -17,6 +17,6 @@ def run():                         # This function calls the 'extract' function 
     extract("bots.csv")
 
 
-if __name__ == "__main__":         # This xecutes the function 'run' when the file is executed directly
+if __name__ == "__main__":         # This executes the function 'run' when the file is executed directly
   run()
 
