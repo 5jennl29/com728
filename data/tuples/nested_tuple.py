@@ -19,8 +19,8 @@ def run():                          # Defines run function
         else:
             good_steps.append(step)          # Otherwise add it to 'good_steps'
 
-    print(f"Good steps: {len(good_steps)}, Bad steps: {len(bad_steps)}")    #Print message displaying the number (length of list) of good steps and bad steps
-
+    print(f"\nGood steps: {len(good_steps)}, Bad steps: {len(bad_steps)}")    #Print message displaying the number (length of list) of good steps and bad steps
+    print(f"\nTry to avoid {bad_steps}")
 
 if __name__ == "__main__":
     run()
