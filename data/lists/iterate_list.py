@@ -1,4 +1,4 @@
-def directions():                                                         # Defines 'directions' function
+def directions():                                                               # Defines 'directions' function
     directions = ["Move Forward", "Move Backward", "Turn Left", "Turn Right"]     # Stores a list
     return directions                                                            # Returns the list
 
@@ -12,7 +12,7 @@ def menu():                                              # Defines 'menu' functi
 
 
 def run():
-    menu()                                   # Calls 'menu' function
+    menu()                                          # Calls 'menu' function
 
 
 if __name__ == "__main__":  # Runs the function 'run' when file is executed directly
