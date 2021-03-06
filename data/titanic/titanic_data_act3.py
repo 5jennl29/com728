@@ -13,7 +13,7 @@ def load_data(file_path):                   # Function definition with parameter
             records.append(line)             # Add each line to the variable 'records'
 
         print("Done!")                      # Print message
-        return records
+        return records, headings
 
 
 def display_menu():
@@ -28,10 +28,21 @@ Please select one of the following options:
     return response
 
 
+def display_passenger_names():
+    print("The names of the passengers are...\n")
+    passenger_names = ""                                            # Variable 'names' = an empty string
+    for values in records:                                          # For the values in the file 'records'
+        passenger_names += f"{values[3]}\n"                                   # Add the info in the fourth column (index 3) to the variable 'passenger_names' with a new line
+    print(f"{passenger_names}")  # print the name info
+
+
 def run():
     records = load_data("titanic.csv")            # Provides csv file name to be passed to 'load_data' function
     selected_option = display_menu()
-    print(f"You have selected option: {selected_option}")
+    if selected_option == 1:
+        display_passenger_names()
+    else:
+        print("Error! Option not recognised.")
 
 
 if __name__ == "__main__":
