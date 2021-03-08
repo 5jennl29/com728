@@ -39,24 +39,46 @@ def display_passenger_names():
 def display_num_survived():
     num_survived = 0
 
-    for row in records:                                          # For the values in the list 'records'
-        survival_status = row[1]                              # Add the info in the second column (index 1) to the variable 'survival status'
+    for row in records:                            # For the row in the list 'records'
+        survival_status = row[1]                    # Add the info in the second column (index 1) to the variable 'survival status'
 
         if "1" in survival_status:
-            num_survived += 1                               # Add 1 to 'num_survived'
+            num_survived += 1                   # Add 1 to 'num_survived'
         else:
-            num_survived += 0                               # Add 0 to 'num_survived'
+            num_survived += 0                   # Add 0 to 'num_survived'
 
     print(f"{num_survived} passengers survived.")  # print the number of survivors
+
+
+def display_passengers_per_gender():
+    female = 0
+    male = 0
+
+    for record in records:
+        gender = record[4]                    # Add the info in the fifth column (index 4) to the variable 'gender'
+
+        if gender == "male":
+            male += 1
+        elif gender == "female":
+            female += 1
+        else:
+            print("There has been an error!")
+
+    print(f"Females: {female}, males: {male}.")
 
 
 def run():
     records = load_data("titanic.csv")            # Provides csv file name to be passed to 'load_data' function
     selected_option = display_menu()
     if selected_option == 1:
+        print("You have selected option 1.\n")
         display_passenger_names()
     elif selected_option == 2:
+        print("You have selected option 2.\n")
         display_num_survived()
+    elif selected_option == 3:
+        print("You have selected option 3.\n")
+        display_passengers_per_gender()
     else:
         print("Error! Option not recognised.")
 
