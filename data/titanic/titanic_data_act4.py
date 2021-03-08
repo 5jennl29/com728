@@ -31,9 +31,23 @@ Please select one of the following options:
 def display_passenger_names():
     print("The names of the passengers are...\n")
     passenger_names = ""                                            # Variable 'names' = an empty string
-    for values in records:                                          # For the values in the file 'records'
+    for values in records:                                          # For the values in the list 'records'
         passenger_names += f"{values[3]}\n"                                   # Add the info in the fourth column (index 3) to the variable 'passenger_names' with a new line
     print(f"{passenger_names}")  # print the name info
+
+
+def display_num_survived():
+    num_survived = 0
+
+    for row in records:                                          # For the values in the list 'records'
+        survival_status = row[1]                              # Add the info in the second column (index 1) to the variable 'survival status'
+
+        if "1" in survival_status:
+            num_survived += 1
+        else:
+            num_survived += 0                   # Add 0 to 'num_survived'
+
+    print(f"{num_survived} passengers survived.")  # print the number of survivors
 
 
 def run():
@@ -41,6 +55,8 @@ def run():
     selected_option = display_menu()
     if selected_option == 1:
         display_passenger_names()
+    if selected_option == 2:
+        display_num_survived()
     else:
         print("Error! Option not recognised.")
 
