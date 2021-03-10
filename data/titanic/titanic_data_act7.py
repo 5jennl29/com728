@@ -124,34 +124,6 @@ def display_survivors_per_age_group():
                     elderly_survived += 1
 
     print(f"Children: {child_survived}/{children}, adults: {adult_survived}/{adults}, elderly: {elderly_survived}/{elderly}.")
-#
-# def display_survivors_per_age_group():
-#
-#     age_groups = display_passengers_per_age_group()
-#
-#     child_survivors = 0
-#     adult_survivors = 0
-#     elderly_survivors = 0
-#
-#     for record in records:
-#
-#         if record[5] == "":
-#             continue
-#         else:
-#             age = float(record[5])
-#
-#         if record[1] == '1' and age < 18:
-#             child_survivors += 1
-#         elif record[1] == '1' and age < 65:
-#             adult_survivors += 1
-#         elif record[1] == '1' and age > 65:
-#             elderly_survivors += 1
-#         else:
-#             continue
-#
-#     print(f"Children survived: {child_survivors}/{age_groups[0]}")
-#     print(f"Adults survived: {adult_survivors}/{age_groups[1]}")
-#     print(f"Elderly survived: {elderly_survivors}/{age_groups[2]}")
 
 
 def run():
