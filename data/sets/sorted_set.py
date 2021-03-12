@@ -3,25 +3,40 @@ def observed():
 
   for count in range(5):
     print("Please enter an observation:")
-    observations.append(input())
+    observation = input()
+    list_observations.append(observation)
 
   return list_observations
 
 
 def remove_observations(list_obs):
-    print("Do you wish to remove observations? [Y/N]")
-    response = input()
-    while response == Y:
-        print("Please enter the observation to be removed:")
-        obs_to_rem = str(input())
-        list_obs.remove(obs_to_rem)
+    is_looping = True
+
+    while is_looping:
+        print("Do you want to remove an observation? y/n")
+        response = input()
+        if response.lower() == "y":
+            print("Please enter the observation to be removed:")
+            obs_to_remove = str(input())
+            list_obs.remove(obs_to_remove)
+        else:
+            is_looping = False
+
 
 
 def run():
-    observed(list_obs)
+    list_obs = observed()
     remove_observations(list_obs)
-    data = sorted(list_obs)
-    print(f"{data}")
+
+    set_of_data = set()
+    for observation in list_obs:
+        data = (observation, list_obs.count(observation))       # For each 'observation', count how many times it's observed and store to variable 'data'
+        set_of_data.add(data)                                   # Add that data to the set 'data_set'
+
+
+    for data in sorted(set_of_data):
+        print(f"{data[0]} observed {data[1]} times")
+
 
 run()
 
