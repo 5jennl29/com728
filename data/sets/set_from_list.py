@@ -23,4 +23,6 @@ def run():
     print(f"{data[0]} observed {data[1]} times.")
 
 
-run()
+# call the function when the module is executed directly
+if __name__ == "__main__":
+    run()
