@@ -1,38 +1,38 @@
-import csv
-import process
-import tui
+import csv                                  # Import csv module
+import process                              # Import file 'process'
+import tui                                  # Import file 'tui'
 
 
-def read_data(file_path):                   # Function definition with parameter 'file_path'
-    started()                               # Print message
-    print(f"Reading data from {file_path}")
 
-    data = []                               # Global variable 'records' = an empty list
-    headings = []                           # Global variable 'headings' = an empty list
+def read_data(file_path):                           # Function definition with parameter 'file_path'
+    tui.started(f"Reading data from {file_path}")
 
-    with open(file_path) as file:           # Opens the file
-        csv_reader = csv.reader(file)       # Reads the file
-        headings = next(csv_reader)         # Passes headings to variable 'headings'
-        for line in csv_reader:             # For the remaining lines in the file
-            data.append(line)               # Add each line to the list 'data'
+    data = []                                       # Global variable 'data' = an empty list
+    _headings = []                                  # Global UNUSED variable '_headings' = an empty list
 
-    completed()
+    with open(file_path) as file:                   # Opens the file
+        csv_reader = csv.reader(file)               # Reads the file
+        _headings = next(csv_reader)                # Passes headings to variable '_headings'
+        for line in csv_reader:                     # For the remaining lines in the file
+            data.append(line)                       # Add each line to the list 'data'
+
+    tui.completed()
     return data
 
 
 def run():
-    athlete_data = read_data("athlete_events.csv")
+    data = read_data("athlete_events.csv")          # Data variable is the result of the call to function 'read_data'
 
-    while True:
+    while True:                                     # Menu selection
         selection = tui.menu()
         if selection == "years":
-            pass
+            process.list_years(data)
         elif selection == "tally":
-            pass
-        elif selection == "team":
-            pass
+            process.tally_medals(data)
+        elif selection == "ctally":
+            process.tally_team_medals(data)
         elif selection == "exit":
-            break
+            break                                   # Exits (or breaks) the run of the program
         else:
             tui.error("Invalid Selection!")
 

@@ -1,69 +1,48 @@
-def started(msg=""):                        # Function definition with parameter
-    print(f"--------------------------------------------------------------------------------\nOperation started: {msg}...\n")
+screen_width = 75                                # Variable the determines the width of the screen
+
+def started(msg=""):                                # Calls this function with a message that's set to an empty string
+    output = f"Operation started: {msg}"            # Output message to user
+    dashes = "-" * screen_width                     # Sets dashes to the length specified in 'screen_width'
+    print(f"{dashes}")                              # Prints dashes
+    print(f"{output}")                              # Prints output message
 
 
 def completed():
-    print("\nOperation completed.\n--------------------------------------------------------------------------------")
+    dashes = "-" * screen_width                     # Sets dashes to the length specified in 'screen_width'
+    print(f"\nOperation completed")                 # Prints message to user
+    print(f"{dashes}")                              # Prints dashes
 
 
 def error(msg):
-    print(f"Error! {msg}!")
+    print(f"Error! {msg}\n")
 
 
 def menu():
-    print("""    
-    [years]    List unique years
-    [tally]    Tally up medals
-    [ctally]   Tally up medals for each team
-    [exit]     Exit the program)\n
-""")
-    print("Your selection:",str(input()))
+    print(f""" Please select one of these options:    
+    {"[years]":<10}  List unique years
+    {"[tally]":<10}  Tally up medals
+    {"[ctally]":<10}  Tally up medals for each team
+    {"[exit]":<10}  Exit the program)\n
+    """)
+
+    print("Your selection: ", end="")                           # Prints message to user
+    selection = input()                                         # Input for user's menu selection
+    return selection.strip().lower()                            # Returns the user input
 
 
 def display_medal_tally(tally):
-    gold_medals = silver_medals = bronze_medals = 0
-
-    if data[14] == "gold":
-        gold_medals += 1
-    elif data[14] == "silver":
-        silver_medals += 1
-    elif data[14] == "bronze":
-        bronze_medals += 1
-
-    tally = {f"Gold", {gold_medals}, "Silver", {silver_medals}, "Bronze", {bronze_medals}}
-
-    for key, value in tally.items():                      # For each key-value pair (item) in 'tally' dictionary
-        print(f"|  {key}: {value}  |")                    # Print the key and the corresponding value
-
-    return gold_medals, silver_medals, bronze_medals
+    print(f"| {'Gold':<10} | {tally['Gold']:<10} |")            # Displays the keys (medal names) and values (medal counts)
+    print(f"| {'Silver':<10} | {tally['Silver']:<10} |")        # :<10 aligns text with <10 characters to the left and pads(fills) the rest with spaces
+    print(f"| {'Bronze':<10} | {tally['Bronze']:<10} |")
 
 
 def display_medal_tally(team_tally):
-
-    print("Analysing data...")
-
-    # Creates dictionary 'team_tally' which calls and stores the results of the other functions as a 'value' with it's 'key' description.
-    team_tally = {f"{data[6]}": display_medal_tally()}
-
-    for key, value in team_tally.items():        # For each item (key-value pair) in 'team_tally'
-        print(f"{key}: {value}")                # Print the key and it's corresponding value
+    for key, value in team_tally.items():                       # For each item (key-value pair) in 'team_tally'
+        print(key)                                              # Print the key
+        print(f"\t{value}")                                     # Print the corresponding value (key and value = items)
 
 
 def display_years(years):
-    years = set()
-    for value in data[9]:
-        years = (value)                      # Display each value (year)
-        years.add(data)                      # Add that data to the set 'years'
+    for key in sorted(years, reverse=True):                     # Sorts the key called 'years' in reverse order (largest first)
+        print(f"{key}")
 
-
-    for data in sorted(years, reverse=True):
-        print(f"{years}\n")
-
-
-def run():
-    started(msg)
-    completed()
-    error(msg)
-
-
-run()
