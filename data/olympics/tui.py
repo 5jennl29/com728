@@ -1,23 +1,3 @@
-import csv    # Imports the csv reader
-
-def load_data(file_path):                   # Function definition with parameter 'file_path'
-    print("Loading data... ", end="")       # Print message
-
-    with open(file_path) as file:           # Opens the file
-        csv_reader = csv.reader(file)       # Reads the file
-        headings = next(csv_reader)         # Passes headings to variable 'headings'
-        for line in csv_reader:                # For the remaining lines in the file
-            records.append(line)             # Add each line to the variable 'records'
-            num_records = len(records)
-
-        print(f"Done!\nSuccessfully loaded {num_records} records.")                      # Print message
-        return records, headings
-
-records = []  # Global variable 'records' = an empty list
-headings = [] # Global variable 'headings' = an empty list
-msg = "Reading data from athlete_events.csv..."
-
-
 def started(msg=""):                        # Function definition with parameter
     print(f"--------------------------------------------------------------------------------\nOperation started: {msg}...\n")
 
