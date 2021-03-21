@@ -15,9 +15,8 @@ def retrieve_bot():
     print("First bot in the system:")
     print(f"{all_rows[0]}\n")
     print("All bots in the system:")
-    print(f"{all_rows[0]}\n{all_rows[1]}\n{all_rows[2]}\n{all_rows[3]}\n{all_rows[4]}")
-
-
+    for row in all_rows:
+        print(row)
 
 
 def run():
