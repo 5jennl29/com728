@@ -28,11 +28,13 @@ def insert_bot_in_db(bot_data):
     cursor = db.cursor()                               # 'cursor' is created
 
     sql = "INSERT INTO bots " \
-          "(name, max_speed, max_strength, created, manufacturer) " \          # NOTE: standard brackets needed
+          "(name, max_speed, max_strength, created, manufacturer) " \
           "VALUES " \
-          f"('{bot_data[0]}', {bot_data[1]}, {bot_data[2]}, '{bot_data[3]}', '{bot_data[4]}');"   # NOTE: standard brackets needed and quotes around string objects
+          "(?, ?, ?, ?, ?);"
 
-    cursor.execute(sql)                                # 'cursor' object uses the method 'execute' to query the database
+    values = [bot_data[0], bot_data[1], bot_data[2], bot_data[3], bot_data[4]]
+
+    cursor.execute(sql, values)                              # 'cursor' object uses the method 'execute' to query the database
     row_id = cursor.lastrowid                           # Variable to collect the row_id of the new item/record
     db.commit()                                         # Commits to db
     db.close()                                          # Closes the database (IMPORTANT!)
