@@ -16,7 +16,24 @@ def phrases(friends):
         quote = input()
         quotes[f"{friend}"] = quote
 
-    print(quotes)
+    return quotes
+
+
+def save(quotes):
+
+    with open("quotes.txt", "w") as file:
+        for key, value in quotes.items():
+            line = f"{key}: {value}\n"
+
+            data = file.write(line)
+
+
 
 friends = gang()
 quotes = phrases(friends)
+print(f"\nPhrases: {quotes}\n")
+
+save(quotes)
+print("The file contains...")
+file = open("quotes.txt")
+print(file.read())
