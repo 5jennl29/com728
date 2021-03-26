@@ -81,6 +81,7 @@ def display_products_missing_suppliers():
     db = sqlite3.connect("catalogue.db")
     cursor = db.cursor()
 
+    # LEFT OUTER JOIN product to supplier table, and supplier to location table
     sql = "SELECT product.name, supplier.name, location.city, location.country " \
           "FROM product " \
           "LEFT OUTER JOIN supplier ON product.supplier_id = supplier.id " \
@@ -98,5 +99,28 @@ def display_products_missing_suppliers():
             print(f"Product: {record[0]}, Supplier: {record[1]}")
         else:
             print(f"Product: {record[0]}, Supplier: {record[1]}, Supplier location: {record[2]}, {record[3]}")
+
+    print("\nOperation completed")
+
+
+def display_suppliers_missing_products():
+    # CONNECT to database, create cursor object
+    db = sqlite3.connect("catalogue.db")
+    cursor = db.cursor()
+
+    # EMULATE right outer join... supplier to product table (switch from previous)
+    sql = "SELECT product.name, supplier.name " \
+          "FROM supplier " \
+          "LEFT OUTER JOIN product ON supplier.id = product.supplier_id; " \
+
+    cursor.execute(sql)
+
+    # Method 'fetchall' gets all records from the db
+    records = cursor.fetchall()
+    db.close()
+
+    print("The suppliers for each product are as follows:\n")
+    for record in records:
+        print(f"Supplier: {record[1]}, Product: {record[0]}")
 
     print("\nOperation completed")
