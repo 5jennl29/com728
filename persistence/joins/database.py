@@ -25,4 +25,27 @@ def display_products_with_stock_levels():
         print(f"Description: {record[2]}")
         print(f"Stock level: {record[3]}\n")
 
-    print("Operation completed")
+    print("\nOperation completed")
+
+
+def display_product_supplier():
+
+    # CONNECT to database, create cursor object
+    db = sqlite3.connect("catalogue.db")
+    cursor = db.cursor()
+
+    sql = "SELECT product_id, product.name, supplier.name " \
+          "FROM product " \
+          "INNER JOIN supplier ON product.supplier_id = supplier.id "
+    cursor.execute(sql)
+
+    # Method 'fetchall' gets all records from the db
+    records = cursor.fetchall()
+    db.close()
+
+    print("The suppliers for each product are as follows:\n")
+    for record in records:
+        print(f"Product: {record[1]}, Supplier: {record[2]}")
+
+    print("\nOperation completed")
+
