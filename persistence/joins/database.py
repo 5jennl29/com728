@@ -8,7 +8,7 @@ def display_products_with_stock_levels():
 
     sql = "SELECT product_id, name, description, quantity " \
           "FROM product " \
-          "NATURAL JOIN stock "
+          "NATURAL JOIN stock; "
     cursor.execute(sql)
 
     # Method 'fetchall' gets all records from the db
@@ -36,7 +36,7 @@ def display_product_supplier():
 
     sql = "SELECT product_id, product.name, supplier.name " \
           "FROM product " \
-          "INNER JOIN supplier ON product.supplier_id = supplier.id "
+          "INNER JOIN supplier ON product.supplier_id = supplier.id; "
     cursor.execute(sql)
 
     # Method 'fetchall' gets all records from the db
@@ -49,3 +49,26 @@ def display_product_supplier():
 
     print("\nOperation completed")
 
+
+def display_product_supplier_locations():
+
+    # CONNECT to database, create cursor object
+    db = sqlite3.connect("catalogue.db")
+    cursor = db.cursor()
+
+    sql = "SELECT product.name, supplier.name, location.city, location.country " \
+          "FROM product " \
+          "INNER JOIN supplier ON product.supplier_id = supplier.id " \
+          "INNER JOIN location ON supplier.location_id = location.loc_id; "
+
+    cursor.execute(sql)
+
+    # Method 'fetchall' gets all records from the db
+    records = cursor.fetchall()
+    db.close()
+
+    print("The suppliers for each product are as follows:\n")
+    for record in records:
+        print(f"Product: {record[0]}, Supplier: {record[1]}, Supplier location: {record[2]}, {record[3]}")
+
+    print("\nOperation completed")
