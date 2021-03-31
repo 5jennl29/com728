@@ -1,4 +1,4 @@
-import database
+from persistence.creation import database
 
 def show_menu():
     print("""\nPlease select an option from the menu below:\n
@@ -30,5 +30,4 @@ def run():
 
 
 
-if __name__ == "__main__":
-    run()
+run()
