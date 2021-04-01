@@ -1,4 +1,5 @@
-from persistence.creation import database
+import database
+
 
 def show_menu():
     print("""\nPlease select an option from the menu below:\n
