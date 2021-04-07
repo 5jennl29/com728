@@ -18,17 +18,15 @@ def run():
     response = show_menu()
 
     if response == 1:
-        presenters_with_org()
+        database.presenters_with_org()
     elif response == 2:
-        events_with_locations()
+        database.events_with_locations()
     elif response == 3:
-        presenters_at_event()
-    elif response == 4:
-        events_for_presenter()
+        database.presenters_at_event()
+    # elif response == 4:
+    #     database.events_for_presenter()
     else:
         print("Error! Please enter a number 1-4")
-
-
 
 
 run()
