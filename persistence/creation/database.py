@@ -137,4 +137,75 @@ def presenters_at_event():
 
 
 def events_for_presenter():
-    pass
+    # CONNECT to database, create cursor object
+    db = sqlite3.connect("cbbc_events.db")
+    cursor = db.cursor()
+
+    sql = "SELECT presenter.pres_id, presenter.first_name, presenter.last_name, event.event_id, event.event_name " \
+          "FROM presenter " \
+          "INNER JOIN event_presenter ON presenter.pres_id = event_presenter.pres_id " \
+          "INNER JOIN event ON event_presenter.event_id = event.event_id ; "
+    cursor.execute(sql)
+
+    # Method 'fetchall' gets all records from the db
+    records = cursor.fetchall()
+    db.close()
+
+    print("Please enter the presenter id (1 -5):")
+    selection = int(input())
+    event_name = []
+    presenter = set()
+
+    for record in records:
+
+        pres_id = record[0]
+        name_event = record[4]
+        pres_name = record[1], record[2]
+
+        if selection == 1 and pres_id == 1:
+            event_name.append(name_event)
+            presenter.add(pres_name)
+        elif selection == 2 and pres_id == 2:
+            event_name.append(name_event)
+            presenter.add(pres_name)
+        elif selection == 3 and pres_id == 3:
+            event_name.append(name_event)
+            presenter.add(pres_name)
+        elif selection == 4 and pres_id == 4:
+            event_name.append(name_event)
+            presenter.add(pres_name)
+        elif selection == 5 and pres_id == 5:
+            event_name.append(name_event)
+            presenter.add(pres_name)
+        else:
+            continue
+
+    if selection == 1:
+        print(presenter)
+        print("is presenting at: ")
+        for event in event_name:
+            print(event)
+    elif selection == 2:
+        print(presenter)
+        print("is presenting at: ")
+        for event in event_name:
+            print(event)
+    elif selection == 3:
+        print(presenter)
+        print("is presenting at: ")
+        for event in event_name:
+            print(event)
+    elif selection == 4:
+        print(presenter)
+        print("is presenting at: ")
+        for event in event_name:
+            print(event)
+    elif selection == 5:
+        print(presenter)
+        print("is presenting at: ")
+        for event in event_name:
+            print(event)
+    else:
+        print("Error!")
+
+    print("\nOperation completed")

@@ -23,8 +23,8 @@ def run():
         database.events_with_locations()
     elif response == 3:
         database.presenters_at_event()
-    # elif response == 4:
-    #     database.events_for_presenter()
+    elif response == 4:
+        database.events_for_presenter()
     else:
         print("Error! Please enter a number 1-4")
 
