@@ -94,8 +94,7 @@ def create_table_actor():
     # SQL commands
     sql = "CREATE TABLE IF NOT EXISTS actor " \
           "(act_id INTEGER NOT NULL," \
-          "first_name TEXT NOT NULL," \
-          "last_name TEXT NOT NULL," \
+          "name TEXT NOT NULL," \
           "PRIMARY KEY(act_id AUTOINCREMENT) " \
           "FOREIGN KEY(act_id) REFERENCES movie_actor(act_id)); "
 
@@ -165,8 +164,7 @@ def create_table_director():
     # SQL commands
     sql = "CREATE TABLE IF NOT EXISTS director " \
           "(dir_id INTEGER NOT NULL," \
-          "first_name TEXT NOT NULL," \
-          "last_name TEXT NOT NULL," \
+          "name TEXT NOT NULL," \
           "PRIMARY KEY(dir_id AUTOINCREMENT) " \
           "FOREIGN KEY(dir_id) REFERENCES movie_director(dir_id)); "
 
@@ -199,12 +197,88 @@ def insert_to_location(movie_records):
     cursor = db.cursor()
     # SQL commands
     for item in movie_records:
-        sql = "INSERT INTO location (country) " \
-              "VALUES (?); " \
+        country = item[7]
+        locations = []
+        for value in country.split(","):
+            locations.append(value.strip())
 
-        values = [item[7]]
-        cursor.execute(sql, values)
-    # COMMIT CHANGES and CLOSE db
+        for item in locations:
+            sql = "INSERT INTO location " \
+                  "(country) " \
+                  "VALUES (?); "
+
+            values = [item]
+            cursor.execute(sql, values)
+
+    db.commit()
+    db.close()
+
+
+def insert_to_genre(movie_records):
+    # CONNECT to db
+    db = sqlite3.connect("movietest.db")
+    cursor = db.cursor()
+    # SQL commands
+    for item in movie_records:
+        genre = item[4]
+        genres = set()
+        for value in genre.split(","):
+            genres.add(value.strip())
+
+        for item in genres:
+            sql = "INSERT INTO genre " \
+                  "(genre) " \
+                  "VALUES (?); "
+
+            values = [item]
+            cursor.execute(sql, values)
+
+    db.commit()
+    db.close()
+
+
+def insert_to_director(movie_records):
+    # CONNECT to db
+    db = sqlite3.connect("movietest.db")
+    cursor = db.cursor()
+    # SQL commands
+    for item in movie_records:
+        director = item[5]
+        directors = set()
+        for value in director.split(","):
+            directors.add(value.strip())
+
+        for item in directors:
+            sql = "INSERT INTO director " \
+                  "(name) " \
+                  "VALUES (?); "
+
+            values = [item]
+            cursor.execute(sql, values)
+
+    db.commit()
+    db.close()
+
+
+def insert_to_actor(movie_records):
+    # CONNECT to db
+    db = sqlite3.connect("movietest.db")
+    cursor = db.cursor()
+    # SQL commands
+    for item in movie_records:
+        actor = item[6]
+        actors = set()
+        for value in actor.split(","):
+            actors.add(value.strip())
+
+        for item in actors:
+            sql = "INSERT INTO actor " \
+                  "(name) " \
+                  "VALUES (?); "
+
+            values = [item]
+            cursor.execute(sql, values)
+
     db.commit()
     db.close()
 
@@ -229,6 +303,7 @@ def run():
     print("Adding data...")
     insert_to_movie_title(movie_records)
     insert_to_location(movie_records)
+    insert_to_genre(movie_records)
 
     print("Done! The data has been added")
 
