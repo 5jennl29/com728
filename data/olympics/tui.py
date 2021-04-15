@@ -13,7 +13,7 @@ def completed():
     print(f"{dashes}")                              # Prints dashes
 
 
-def error(msg): `
+def error(msg):
     print(f"Error! {msg}\n")
 
 
