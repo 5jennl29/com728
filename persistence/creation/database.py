@@ -53,15 +53,16 @@ def events_with_locations():
     print("\nOperation completed")
 
 
-def presenters_at_event():
+def presenters_at_event(event_id):
     # CONNECT to database, create cursor object
     db = sqlite3.connect("cbbc_events.db")
     cursor = db.cursor()
 
-    sql = "SELECT event.event_id, event.event_name, presenter.first_name, presenter.last_name " \
+    sql = "SELECT event.event_name, presenter.first_name, presenter.last_name " \
           "FROM event " \
           "INNER JOIN event_presenter ON event.event_id = event_presenter.event_id " \
-          "INNER JOIN presenter ON event_presenter.pres_id = presenter.pres_id; "
+          "INNER JOIN presenter ON event_presenter.pres_id = presenter.pres_id" \
+          f"WHERE event.id = {event_id}; "
     cursor.execute(sql)
 
     # Method 'fetchall' gets all records from the db
